@@ -9,7 +9,7 @@ import { AcceptMessageSchema } from "@/schemas/acceptMessageSchema";
 import { ApiResponse } from "@/types/ApiResponse";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios, { AxiosError } from "axios";
-import { Loader, Loader2, LoaderPinwheel, RefreshCcw } from "lucide-react";
+import { Loader2, LoaderPinwheel, RefreshCcw } from "lucide-react";
 import { User } from "next-auth";
 import { useSession } from "next-auth/react";
 import { useCallback, useEffect, useState } from "react";
@@ -181,7 +181,7 @@ const Dashboard = () => {
       </Button>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
         {messages.length > 0 ? (
-          messages.map((message, index) => (
+          messages.map((message) => (
             <MessageCard
               key ={message._id as string}
               message={message}

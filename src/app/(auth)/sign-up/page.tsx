@@ -12,8 +12,6 @@ import { ApiResponse } from "@/types/ApiResponse";
 import { useDebounceCallback } from "usehooks-ts";
 import {
   Form,
-  FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -73,7 +71,7 @@ const SignUpForm = () => {
 
       const axiosError = error as AxiosError<ApiResponse>;
 
-      let errorMsg = axiosError.response?.data.message;
+      const errorMsg = axiosError.response?.data.message;
 
       toast({
         title: "SignUp Failed",
@@ -98,8 +96,8 @@ const SignUpForm = () => {
             setUsernameMessage(response.data.message);
           }
         } catch (error) {
-          let axiosError = error as AxiosError<ApiResponse>;
-          let ErrorMsg =
+          const axiosError = error as AxiosError<ApiResponse>;
+          const ErrorMsg =
             axiosError.response?.data.message ?? "Error Validating UserName";
 
           setUsernameMessage(ErrorMsg);

@@ -59,7 +59,7 @@ const VerificationPage = () => {
       }
     } catch (error) {
       const axiosError = error as AxiosError<ApiResponse>;
-      let ErrorMsg = axiosError.response?.data.message;
+      const ErrorMsg = axiosError.response?.data.message;
       toast({
         title: "Failed",
         description: ErrorMsg,

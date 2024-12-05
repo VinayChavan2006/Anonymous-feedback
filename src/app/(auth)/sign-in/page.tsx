@@ -6,11 +6,8 @@ import { z } from "zod";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
-import { ApiResponse } from "@/types/ApiResponse";
 import {
   Form,
-  FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -22,7 +19,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { signInSchema } from "@/schemas/signInSchema";
 import { signIn } from "next-auth/react";
-import { error } from "console";
 
 const SignInForm = () => {
   // States management
